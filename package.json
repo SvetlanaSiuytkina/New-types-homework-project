@@ -1,0 +1,27 @@
+{
+  "name": "new-types-homework-project",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/SvetlanaSiuytkina/New-types-homework-project#readme",
+  "bugs": {
+    "url": "https://github.com/SvetlanaSiuytkina/New-types-homework-project/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SvetlanaSiuytkina/New-types-homework-project.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "jest --coverage"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.3"
+  }
+}
