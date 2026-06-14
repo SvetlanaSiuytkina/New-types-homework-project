@@ -1,10 +1,10 @@
 export class Movie {
-    title: string;
-    year: number;
-    country: string;
-    slogan: string;
-    genre: string;
-    time: number | string;
+    private title: string;
+    private year: number;
+    private country: string;
+    private slogan: string;
+    private genre: string;
+    private time: number | string;
 
     constructor(
         title: string,

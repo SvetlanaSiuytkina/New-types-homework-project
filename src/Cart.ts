@@ -1,25 +1,26 @@
 import {Movie} from './Movie';
 
-class Cart {
-    items: Movie[];
+export class Cart {
+    private items: Movie[];
 
     constructor() {
         this.items = [];
     }
 
-    addItemMovie() {
-        this.items.push();
+    addItemMovie(movie: Movie) {
+        this.items.push(movie);
     }
 
     getItemsMovies() {
         return this.items;
     }
 
-    displayInfoMoviesInCart() {
+    displayInfoMoviesInCart(): string {
         if (this.items.length === 0) {
             return 'Ваша корзина пуста';
         }
 
-        return this.items/////////
+        return this.items.map((movie, index) => 
+            `${index + 1}. ${movie.getInfoMovie}`).join('\n\n');
     }
 }
