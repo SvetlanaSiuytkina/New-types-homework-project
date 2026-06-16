@@ -1,4 +1,4 @@
-import {Movie} from './Movie';
+import {Movie} from './Movie.js';
 
 export class Cart {
     private items: Movie[];
@@ -21,6 +21,6 @@ export class Cart {
         }
 
         return this.items.map((movie, index) => 
-            `${index + 1}. ${movie.getInfoMovie}`).join('\n\n');
+            `${index + 1}. ${movie.getInfoMovie()}`).join('\n');
     }
 }

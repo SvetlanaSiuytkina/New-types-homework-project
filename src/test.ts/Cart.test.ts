@@ -1,5 +1,5 @@
-import { Movie } from '../Movie';
-import { Cart } from '../Cart';
+import { Movie } from '../Movie.js';
+import { Cart } from '../Cart.js';
 
 let cart: Cart;
 let movie: Movie;
@@ -27,9 +27,16 @@ test('getItems should return an array of all the movies in the cart', () => {
 });
 
 test('displayCart should return an empty cart message', () => {
-    expect(cart.displayInfoMoviesInCart()).toEqual('Корзина пуста');
+    expect(cart.displayInfoMoviesInCart()).toEqual('Ваша корзина пуста');
 });
 
 test('displayCart should return a string with information about movies', () => {
-    expect(cart.displayInfoMoviesInCart()).toContain('1. Название: Мститетли');
+    cart.addItemMovie(movie);
+    const result = cart.displayInfoMoviesInCart();
+    expect(result).toContain('1. Название: Мстители');
+    expect(result).toContain('Год: 2012');
+    expect(result).toContain('Страна: США');
+    expect(result).toContain('Слоган: Avengers Assemble!');
+    expect(result).toContain('Жанр: фантастика');
+    expect(result).toContain('Время: 137 мин');
 });

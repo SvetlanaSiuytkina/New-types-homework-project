@@ -23,13 +23,6 @@ export class Movie {
     }
 
     getInfoMovie(): string {
-        return `
-        Название: ${this.title}:
-        Год: ${this.year}
-        Страна: ${this.country}
-        Слоган: ${this.slogan}
-        Жанр: ${this.genre}
-        Время: ${this.time}
-        `
+        return `Название: ${this.title}, Год: ${this.year}, Страна: ${this.country}, Слоган: ${this.slogan}, Жанр: ${this.genre}, Время: ${this.time}`
     }
 }

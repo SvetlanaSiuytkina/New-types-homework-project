@@ -1,4 +1,4 @@
-import { Movie } from './Movie';
-import { Cart } from './Cart';
+import { Movie } from './Movie.js';
+import { Cart } from './Cart.js';
 
 export {Movie, Cart};
