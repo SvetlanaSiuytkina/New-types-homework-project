@@ -7,14 +7,16 @@ export default {
   testEnvironment: 'node',
   preset: 'ts-jest',
   transform: {
-    '^.+\\.ts$': [
-      'ts-jest',
+    '^.+\\.ts$': ['ts-jest',
       {
         useESM: true,
         tsconfig: '<rootDir>/tsconfig.json'
       }
-    ]
+    ],
   },
   moduleFileExtensions: ['ts', 'js', 'json'],
-  testPathIgnorePatterns: ['<rootDir>/dist/']
+  testPathIgnorePatterns: ['<rootDir>/dist/'],
+  moduleNameMapper: {
+    '^(\\.{1,2}/.*)\\.js$': '$1',
+  },
 };
